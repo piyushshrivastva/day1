@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+  </head>
+  <body>
+
+      <div id="box" style="height: 300px; width: 280px; background-color: #807575;">
+    </div>
+    
+    <br>
+    <div id="btn">
+      <button onclick="changeColor()">change Color</button>
+      <button id="addChild">add Child</button>
+      <button id="removeChild">remove Child</button>
+    </div>
+
+
+<script>
+    let arr=['red','blue','green','pink','yellow']
+    let rectangularBox=document.getElementById('box');
+
+
+function changeColor(){
+    let random=Math.floor(Math.floor(Math.random() * 5));
+    box.style.backgroundColor=arr[random];
+}
+
+
+
+let squareBox = document.createElement("div");
+squareBox.style.cssText = "height: 50px; width: 50px; background: purple;"
+addChild.addEventListener("click", function(){
+        
+        let addBox = document.getElementById("box");
+        addBox.appendChild(squareBox);
+})
+
+
+
+removeChild.addEventListener("click", function(){
+    box.removeChild(squareBox)
+})
+
+
+</script>
+
+
+  </body>
+</html>
